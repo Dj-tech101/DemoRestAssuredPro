@@ -15,7 +15,20 @@ public class statusCodeGet {
 		Response res=RestAssured.given().get("https://reqres.in/api/users/2");
 		
 		
+		
 		System.out.println("the response code is "+res.statusCode());
+		
+		System.out.println(res.getBody().asString());
+		
+		System.out.println(res.header("headerName"));
+		
+		System.out.println(res.getCookie("cookieName"));
+		
+		System.out.println("session id is "+res.sessionId());
+		
+		
+		
+		
 	}
 	
 	
